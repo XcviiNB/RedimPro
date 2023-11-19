@@ -171,7 +171,7 @@ public class TaskReminderController {
             LocalTime currentTime = LocalTime.parse(timeString, DateTimeFormatter.ofPattern("HH:mm:ss"));
             for (Tasks task : taskTableView.getItems()) {
                 if (task.getTime().equals(currentTime) && task.getDate().equals(LocalDate.now())) {
-                    taskAlert("Tast Alert!", task.getTask(), null, task);
+                    taskAlert("Task Alert!", task.getTask(), null, task);
                     break;
                 }
             }
